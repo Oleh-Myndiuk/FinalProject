@@ -1,0 +1,53 @@
+.menu {
+  position: relative;
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    span {
+      margin-right: 0.5em;
+      font-size: 1em;
+    }
+
+    .arrow-icon {
+      font-size: 1.2em;
+    }
+  }
+
+  .menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    .submenu {
+      display: none;
+      list-style-type: none;
+      padding-left: 1em;
+
+      .submenu__item {
+        margin: 0.3em 0;
+
+        a {
+          color: #333;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  &.open {
+    .menu-list {
+      .submenu {
+        display: block;
+      }
+    }
+  }
+}

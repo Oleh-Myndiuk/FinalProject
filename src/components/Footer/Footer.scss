@@ -1,0 +1,56 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3em;
+  background: linear-gradient(to right, black, red);
+  color: #fff;
+  margin-top: 150px;
+
+  .footer__logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: red;
+  }
+
+  .footer__contacts {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+
+    .footer__contact-item {
+      margin-bottom: 0.7em;
+      text-decoration: none;
+
+      .footer__icon {
+        margin-right: 0.5em;
+        font-size: 1.2em;
+      }
+
+      span {
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+        &:hover {
+          color: #000000;
+        }
+      }
+    }
+  }
+
+  .footer__social {
+    display: flex;
+    gap: 10px;
+
+    a {
+      color: #fff;
+      font-size: 30px;
+      text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #060606;
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background: linear-gradient(to right, black, red);
+  color: #fff;
+
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+    @media screen and (min-width: 378px) {
+      font-size: 1em;
+    }
+  }
+
+  .menu {
+    .menu__list {
+      display: flex;
+      gap: 3em;
+      list-style-type: none;
+      cursor: pointer;
+      @media screen and (min-width: 378px) {
+        gap: 1em;
+      }
+
+      .menu__item {
+        position: relative;
+
+        .menu__link {
+          color: #fff;
+          text-decoration: none;
+          transition: color 0.3s;
+
+          &:hover {
+            color: #ccc;
+          }
+        }
+
+        .submenu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          min-width: 200px;
+          background-color: #333;
+          border: 1px solid #666;
+          list-style: none;
+          padding: 0.5em;
+          margin: 0;
+          @media screen and (min-width: 378px) {
+            min-width: 100px;
+          }
+
+          .submenu__item {
+            color: #fff;
+            padding: 0.5em;
+            transition: background-color 0.3s;
+            @media screen and (min-width: 378px) {
+              padding: 0.2em;
+            }
+            &:hover {
+              background-color: #f10707;
+              cursor: pointer;
+            }
+          }
+        }
+
+        &:hover {
+          .submenu {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .search {
+    &__input {
+      padding: 0.5em;
+      font-size: 1.5em;
+      border-radius: 20px;
+      height: 25px;
+      border: 2px solid #f60303;
+      color: #b86464;
+    }
+
+    &__button {
+      height: 28px;
+      border-radius: 8px;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+.scroll-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+  }
+}

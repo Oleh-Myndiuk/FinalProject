@@ -1,0 +1,14 @@
+.theme-selector {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+
+  label {
+    margin-right: 1em;
+    font-size: 1em;
+
+    input[type="radio"] {
+      margin-right: 0.3em;
+    }
+  }
+}
